@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <h2>HTML Forms</h2>
+    <form
+      name="myForm"
+      action="../Form Validation/index.html"
+      onsubmit="return validationForm()"
+    >
+      <h3>Registration Form</h3>
+      Username :
+      <input type="text" placeholder="Enter your username" name="uname" />
+      <br /><br />
+      Age : <input type="number" name="age" required /><br /><br />
+      Residency :
+      <input type="radio" name="residency" value="resident" checked />
+      Resident
+      <input type="radio" name="residency" value="nonresident" />
+      Non-resident
+      <br /><br />
+      Select account: <input type="checkbox" name="acctype" value="savings" />
+    </form>
+  </head>
+  <body></body>
+</html>
