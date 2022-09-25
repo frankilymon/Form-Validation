@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
     <h2>HTML Forms</h2>
     <form
       name="myForm"
-      action="../Form Validation/index.html"
+      action="../form.html"
       onsubmit="return validationForm()"
     >
       <h3>Registration Form</h3>
@@ -22,7 +25,25 @@
       Non-resident
       <br /><br />
       Select account: <input type="checkbox" name="acctype" value="savings" />
+      Savings
+      <input type="checkbox" name="acctype" value="checking" checked />
+      Checking
+      <input type="checkbox" name="acctype" value="mmarket" />
+      Money Market
+      <br /><br />
+      Nationality :
+      <select id="nationality">
+        <option value="1">Austrailia</option>
+        <option value="2">Canada</option>
+        <option value="3" selected>Nigeria</option>
+        <option value="4">Germany</option>
+        <option value="5">USA</option>
+        <option value="6">Kenya</option>
+      </select>
+      <br /><br />
+      <input type="submit" name="forms" value="Submit" />
+      <input type="reset" name="forms" value="Reset" />
     </form>
-  </head>
-  <body></body>
+    <script src="formIntro.js"></script>
+  </body>
 </html>
