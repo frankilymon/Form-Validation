@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
- 
-  <body style="background-color: #7f819e">
+ <style>
+  
+ </style>
+  <body style="background-color: #8392ae" >
     <h2>FORM VALIDATION</h2>
+   
     <form
       name="myForm"
       action="../form.html"/
@@ -21,7 +24,7 @@
       <br /><br />
       Age : <input type="number" name="age" required /><br /><br />
       Residency :
-      <input type="radio" name="residency" value="resident" checked />
+      <input type="radio" name="residency" value="resident" />
       Resident
       <input type="radio" name="residency" value="nonresident" />
       Non-resident
@@ -30,8 +33,8 @@
       Savings
       <input type="checkbox" name="acctype" value="checking" checked />
       Checking
-      <input type="checkbox" name="acctype" value="mmarket" />
-      Money Market
+      <input type="checkbox" name="acctype" value="credit" />
+      Credit
       <br /><br />
       Nationality :
       <select id="nationality">
@@ -46,6 +49,7 @@
       <input type="submit" name="forms" value="Submit" />
       <input type="reset" name="forms" value="Reset" />
     </form>
+ 
     <script src="formIntro.js"></script>
   </body>
 </html>

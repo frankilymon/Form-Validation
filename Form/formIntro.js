@@ -13,6 +13,10 @@ function validationForm() {
     uname.focus();
     return false;
   }
+  if (!residentStatus.value) {
+    alert("Residency field can't be blank");
+    return false;
+  }
   if (!regxName.test(uname.value)) {
     uname.style.border = "solid 2px red";
     document.getElementById("unameLabel").innerHTML =
