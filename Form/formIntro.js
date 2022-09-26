@@ -1,30 +1,38 @@
+"use strict";
+
 function validationForm() {
-  var uname = document.forms["myForm"]["uname"].value;
-  var age = document.forms["myForm"]["age"].value;
-  var residentStatus = document.forms["myForm"]["residency"].value;
+  var uname = document.forms["myForm"]["uname"];
+  var age = document.forms["myForm"]["age"];
+  var residentStatus = document.forms["myForm"]["residency"];
   var accountType = document.querySelectorAll("input[name=acctype]:checked");
-  var nationality = document.forms["myForm"][nationality].value;
-  if (uname.length < 6) {
+  var nationality = document.forms["myForm"][nationality];
+  var regxName = /^([a-zA-Z]+)$/;
+
+  if (uname.value.length < 6) {
     alert("The username needs to be atleast 6 characters long");
+    uname.focus();
+    return false;
+  }
+  if (!regxName.test(uname.value)) {
+    uname.style.border = "solid 2px red";
+    document.getElementById("unameLabel").innerHTML =
+      "The name must be an alphabet";
+    document.getElementById("unameLabel").style.visibility = "visible";
     return false;
   } else {
-    var selectedAccounts = [];
-    for (let i = 0; i < accountType.length; i++) {
-      selectedAccounts.push(accountType[i].value);
-    }
-    var alertMsg =
-      "The details supplied: " +
-      " \nUsername: " +
-      uname +
-      "\nAge: " +
-      age +
-      "\nResident status: " +
-      residentStatus +
-      "\nAccounts selected: " +
-      selectedAccounts +
-      "\nNationality index: " +
-      nationality;
-    alert(alertMsg);
-    return true;
+    uname.style.border = "solid 2px green";
+    document.getElementById("unameLabel").innerHTML = "Username is valid";
+    document.getElementById("unameLabel").style.color = "green";
+    document.getElementById("unameLabel").style.visibility = "visible";
   }
+
+  if (age.value < 18) {
+    alert("You must be 18 years old to open an account");
+    return false;
+  }
+  if (accountType.length == 0) {
+    document.querySelectorAll("input[name=acctype]")[1].checked = true;
+  }
+  confirm("Do you want to submit the form");
+  return true;
 }

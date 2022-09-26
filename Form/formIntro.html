@@ -5,17 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-
-  <body>
+ 
+  <body style="background-color: #7f819e">
     <h2>HTML Forms</h2>
     <form
       name="myForm"
-      action="../form.html"
+      action="../form.html"/
       onsubmit="return validationForm()"
     >
       <h3>Registration Form</h3>
       Username :
       <input type="text" placeholder="Enter your username" name="uname" />
+      <label id="unameLabel" style="color: red; visibility:hidden">
+      Username should be a minimum of 6 characters</label>
       <br /><br />
       Age : <input type="number" name="age" required /><br /><br />
       Residency :
@@ -24,7 +26,7 @@
       <input type="radio" name="residency" value="nonresident" />
       Non-resident
       <br /><br />
-      Select account: <input type="checkbox" name="acctype" value="savings" />
+      Select Account: <input type="checkbox" name="acctype" value="savings" />
       Savings
       <input type="checkbox" name="acctype" value="checking" checked />
       Checking
@@ -34,7 +36,7 @@
       Nationality :
       <select id="nationality">
         <option value="1">Austrailia</option>
-        <option value="2">Canada</option>
+        <option value="2" >Canada</option>
         <option value="3" selected>Nigeria</option>
         <option value="4">Germany</option>
         <option value="5">USA</option>
